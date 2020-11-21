@@ -423,7 +423,7 @@
       flex-direction: row;
       list-style-type: none;
       padding-left: 0;
-      margin-top: 0;
+      margin-top: 20px;
       margin-bottom: 15px;
     }
     
@@ -1341,14 +1341,6 @@
   justify-content: flex-end;
 }
 
-@media (orientation: landscape) {
-  .card-trend1, .card-trend2, .card-trend3, .card-trend4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 24.5%;
-  }
-}
 
 /* MAIN */
 .holder{
@@ -1428,6 +1420,15 @@ aside {
 
 }
 
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+  .card-trend1, .card-trend2, .card-trend3, .card-trend4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 24.5%;
+  }
+}
+
 /*! ==============================!!! mobile !!!=============================*/
 @media (max-width: 640px) {
 
@@ -1446,10 +1447,24 @@ aside {
   width: 90%;
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 10%;
+  
+}
+
+.welcome-title {
+font-size: 26px;
+line-height: 1.385;
+padding-top: 0;
 }
 
 .container {
   width: 90%;
+  margin-top: 0;
+}
+
+.header-logo {
+  width: 90%;
+  padding-top: 10%;
 }
 
 
@@ -1472,7 +1487,7 @@ aside {
   cursor: pointer;
   position: relative;
   z-index: 2;
-  top: -107px;
+  top: -207px;
 }
 
 .menu__button-label {
@@ -1505,9 +1520,165 @@ aside {
   bottom: 0;
 }
 
+/* trend */
+.card-trend1, .card-trend2, .card-trend3, .card-trend4 {
+  width: 100%;
+  margin: 0;
+ margin-right: 3px;
+ margin-top: 3px;
+
+}
+.trend-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
+.holder {
+  display: flex;
+  flex-direction: column;
+  width: 90%; 
+  padding-bottom: 40px;
+}
 
+.main {
+  width: 100%; 
+}
 
+.contents {
+  width: 100%;
+  margin: auto;
+  padding: 0;
+    }
 
+.content{
+display: flex;
+flex-direction: column;
+   } 
 
+.course-img {
+  width: 100%;
+  object-fit: contain;
+  height: auto; 
+}
+
+.course-info {
+  width: 100%;
+}
+
+.course-info .teg {
+  margin-top: 17px;
+}
+
+ /* aside */
+ aside {
+  width: 100%;
+  margin: 0;
+ }
+
+ .sidebar-title {
+  width: 100%;
+ }
+
+ .sidebar-name {
+  margin-top: 40px;
+  font-size: 16px;
+ }
+
+ sidebare-img {
+  width: 19%;
+ }
+
+ .field-info {
+  width: 100%;
+ }
+
+ .field {
+  width: 100%;
+ }
+
+ .button {
+  width: 100%;
+ }
+
+ .container-teg-sidebar {
+  width: 100%;
+ }
+
+ .teg-sidebar-text {
+  margin-right: 5px;
+ }
+
+ .teg-sidebar-text:nth-child(3n+2) {
+  margin-right: 5px;
+  margin-left: 5px;
+ }
+ 
+/* product */
+.product-info {
+  width: 90%;
+  
+}
+
+.product-name {
+  margin-top: 0px;
+  width: 90%;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.card-product {
+  width: 100%;
+}
+
+.picture {
+  width: 100%;
+  object-fit: contain;
+  height: auto; 
+}
+
+.product-badge {
+  width: 100%;
+}
+
+.product__prices {
+  width: 25%;
+}
+
+button product__button {
+  width: 65%;
+}
+
+/* footer */
+.footer_main {
+  width: 90%; 
+}
+
+/* popup */
+.popup {
+  padding: 30px 20px;
+  font-size: 15.5px;
+ }
+
+ .popup-name {
+  font-size: 15.5px;
+ }
+
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .card-trend1, .card-trend2, .card-trend3, .card-trend4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 49%;
+    margin: 0;
+    margin-right: 3px;
+    margin-top: 3px; 
+  }
