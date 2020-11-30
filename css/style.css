@@ -799,15 +799,20 @@
           
     
     }
-      .card-product1__body, .card-product2__body, .card-product3__body {
+      .card-product__body {
       position: relative;
+      margin: auto;
     }
 
       .product__image{
       width: 300px;
       height: 204px;
-      margin-right: 5px;
-      margin-left: 23px;
+      margin: auto;
+      
+    }
+
+    .picture {
+      margin: auto;
     }
     
       
@@ -835,11 +840,6 @@
       line-height: 22px;
       color: #000000;
 
-      width: 300px;
-      padding-left: 23px;
-
-
-      
     }
 
     .additional-info:hover {
@@ -1060,227 +1060,224 @@
      
     }
 
-  /* popup */
+        /* popup */
 
-  .popup {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    padding: 33px 15px;
-    width: 100%;
-    min-width: 320px;
-    height: 100%;
-    background-color: rgba(00, 00, 00, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: all 0.8s ease 0s;
-}
-
-.popup__body {
-  width: 391px;  
- margin:auto;
-}
-
-popup:target {
-    opacity: 1;
-    visibility: visible;
-}
-
-popup:target .popup__content {
-    transform: translateY(0);
-    opacity: 1;
-}
-  
-  .popup-name {
-    text-align: center;
-    
-    text-decoration: none;
-    list-style: none;
-    text-transform: uppercase;
-    font-family: 'Bold';
-    font-size: 20px;
-    line-height: 20px;
-    color: #0f0d0e;
-    margin:auto;
-    margin-top: 63px;
-    margin-bottom: 25px;
-      
-    }
-
-  .popup-name::after {
-    content: "";
-    display: flex;
-    background-position: center center;
-    background-color: #e1d9bd;
-    background-size: cover;
-     
-    width: 65px;
-    height: 3px;
-     
-    margin: auto;
-    margin-bottom: 13px;
-    margin-top: 13px;
-     
-   }
-
-   .form {
-    display: flex;
-    flex-direction: column;
-    width: 327px;
-  
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 58px;
-    margin-top: 30px;
-    
-  }
-  
-  .form-group:nth-child(n+2) {
-    margin-top: 20px;
-  }
-  
-  .select {
-  border: none;
-  
-  font-size: 14px;
-  font-family: Arial,sans-serif;
-
-  width: 100%;
-  height: 50px;
-  padding-left: 20px;
-  font-family: inherit;
-  background-color: #f4f7f6;
-  background-image: url("../svg/form-arrows.svg");
-  background-size: 10px auto;
-  background-repeat: no-repeat;
-  background-position: center right 15px;
-  color: #939594;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  margin-top: 3.57%;
- 
-    
-  }
-
-  .radio-group {
-    display: flex;
-    flex-direction: row;
-    margin-top: 12px;
-  }
-
-  .radio:nth-child(n+2) {
-    margin-left: 15px;
-  }
-
-   .radio-group-text::before {
-    content: "";
-    margin-right: 8px;
-    display: inline-block;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    background-image: url(../svg/form-empty-circle.svg);
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-size: 20px;
-     vertical-align: middle;
-    }
-
-    .radio-button:checked ~ .radio-group-text::before {
-      background-image: url(../svg/form-circle.svg);
+        .popup {
+         
+          width: 100%;
+          min-width: 320px;
+          position: relative;
+          z-index: 4;
+        right: 0;
+        left: 0;
+       top: 0;
+       bottom: 0;
+       display: none;
+          
       }
-      
-    .radio-button {
-      position: absolute;
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      width: 1px;
-    }
+        
+        
+      .popup::after {
+          content: "";
+          background-color: #000000;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.65;
+            }
+
+        .popup__body {
+          width: 391px;  
+           margin:auto;
+           position: relative;
+           z-index: 999;
+           background-color: #fdfdfd;
+          }
 
         
-  
-  .button-popup {
-  border: none;
-  color: #ffffff;
-  background-color: #b59f5b;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-family: 'Bold';
-  width: 327px;
-  height: 47px;
-  cursor: pointer;
-    
-  }
-  
-  .button:hover{
-    font-size: 15px;
-    text-transform:uppercase;
-  }
+        .popup-name {
+          text-align: center;
+          
+          text-decoration: none;
+          list-style: none;
+          text-transform: uppercase;
+          font-family: 'Bold';
+          font-size: 20px;
+          line-height: 20px;
+          color: #0f0d0e;
+          margin:auto;
+          margin-top: 63px;
+          margin-bottom: 25px;
+            
+          }
+      
+        .popup-name::after {
+          content: "";
+          display: flex;
+          background-position: center center;
+          background-color: #e1d9bd;
+          background-size: cover;
+           
+          width: 65px;
+          height: 3px;
+           
+          margin: auto;
+          margin-bottom: 13px;
+          margin-top: 13px;
+           
+         }
 
-  .checkbox-text, .select-label, .field-label {
-    text-decoration: none;
-     list-style: none;
-     text-align: left;
-     font-family: 'Regular';
-     font-size: 14px;
-     line-height: 14px;
-     color: #000000; 
-     
-  }
- 
- 
-  .field-textarea {
-    background-color: #f4f7f6;
-    border: none;
-    margin-top: 3.57%;
-    margin-bottom: 10px;
-    padding: 20px;
-    width: 287px;
-    height: 130px;
-    resize: none;
-    font-family: inherit;
-    font-size: inherit;
-    color: rgb(155, 156, 156);
-  }
-   
-  .popup__close {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -32px;
-    background-image: url("../svg/form-x.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: unset;
-    cursor: pointer;
-    border: none;
-    margin-left: auto;
-    margin-right: 0em;
-
-}
-
- 
-.popup__close:focus {
-  outline: none;
-}
-
-.popup__close_size {
-  width: 20px;
-  height: 20px;
-}
-
-popup {
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute;
-    }
+         .form {
+          display: flex;
+          flex-direction: column;
+          width: 327px;
+        
+          margin-left: 30px;
+          margin-right: 30px;
+          margin-bottom: 58px;
+          margin-top: 30px;
+          
+        }
+        
+        .form-group:nth-child(n+2) {
+          margin-top: 20px;
+        }
+        
+        .select {
+        border: none;
+        
+        font-size: 14px;
+        font-family: Arial,sans-serif;
+      
+        width: 100%;
+        height: 50px;
+        padding-left: 20px;
+        font-family: inherit;
+        background-color: #f4f7f6;
+        background-image: url("../svg/form-arrows.svg");
+        background-size: 10px auto;
+        background-repeat: no-repeat;
+        background-position: center right 15px;
+        color: #939594;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      
+        margin-top: 3.57%;
+       
+          
+        }
+      
+        .radio-group {
+          display: flex;
+          flex-direction: row;
+          margin-top: 12px;
+        }
+      
+        .radio:nth-child(n+2) {
+          margin-left: 15px;
+        }
+      
+         .radio-group-text::before {
+          content: "";
+          margin-right: 8px;
+          display: inline-block;
+          text-align: center;
+          width: 20px;
+          height: 20px;
+          background-image: url(../svg/form-empty-circle.svg);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 20px;
+           vertical-align: middle;
+          }
+      
+          .radio-button:checked ~ .radio-group-text::before {
+            background-image: url(../svg/form-circle.svg);
+            }
+            
+          .radio-button {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            width: 1px;
+          }
+      
+              
+        
+        .button-popup {
+        border: none;
+        color: #ffffff;
+        background-color: #b59f5b;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'Bold';
+        width: 327px;
+        height: 47px;
+        cursor: pointer;
+          
+        }
+        
+        .button:hover{
+          font-size: 15px;
+          text-transform:uppercase;
+        }
+      
+        .checkbox-text, .select-label, .field-label {
+          text-decoration: none;
+           list-style: none;
+           text-align: left;
+           font-family: 'Regular';
+           font-size: 14px;
+           line-height: 14px;
+           color: #000000; 
+           
+        }
+       
+       
+        .field-textarea {
+          background-color: #f4f7f6;
+          border: none;
+          margin-top: 3.57%;
+          margin-bottom: 10px;
+          padding: 20px;
+          width: 287px;
+          height: 130px;
+          resize: none;
+          font-family: inherit;
+          font-size: inherit;
+          color: rgb(155, 156, 156);
+        }
+         
+        .popup__close {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: -32px;
+          background-image: url("../svg/form-x.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: unset;
+          cursor: pointer;
+          border: none;
+          margin-left: auto;
+          margin-right: 0em;
+      
+      }
+      
+       
+      .popup__close:focus {
+        outline: none;
+      }
+      
+      .popup__close_size {
+        width: 20px;
+        height: 20px;
+      }
+      
   
  /*! ==============================!!! tablet !!!============================= */
 
@@ -1410,9 +1407,6 @@ aside {
   width:calc((100% - 20px)/2);
       }
 
-.card-product1__body, .card-product2__body, .card-product3__body {
-  width:calc((100% - 20px)/2);
-}
 
 
 .picture {
