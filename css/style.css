@@ -1066,7 +1066,7 @@
          
           width: 100%;
           min-width: 320px;
-          position: relative;
+          position: fixed;
           z-index: 4;
         right: 0;
         left: 0;
