@@ -969,8 +969,6 @@
     .socials-item{
      display:inline-block;
       list-style-type:none;
-      -webkit-user-select:none;
-      -moz-user-select:none;
       margin-right: 23px;
     }
     
@@ -1176,8 +1174,7 @@
         background-position: center right 15px;
         color: #939594;
         cursor: pointer;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        
       
         margin-top: 3.57%;
        
@@ -1482,6 +1479,15 @@ aside {
   width: 100%;
  }
 
+ .container-topic{
+    width: 100%;
+  
+}.container-topic{
+  
+  width: 100%;
+  
+}
+
  .teg-sidebar-text {
   margin-right: 3px;
   margin-left: 3px;
@@ -1507,7 +1513,9 @@ aside {
   width:calc((100% - 20px)/2);
       }
 
-
+  .product__button {
+        width: 140px;
+      }
 
 .picture {
   width: 48.3%;
@@ -1821,6 +1829,10 @@ margin-bottom: 33px;
   width: 100%;
 }
 
+.product__button {
+  width: 140px;
+}
+
 .picture {
   width: 100%;
   object-fit: contain;
@@ -1843,9 +1855,7 @@ margin-bottom: 33px;
   width: 25%;
 }
 
-button product__button {
-  width: 65%;
-}
+
 
 /* footer */
 .footer_main {
